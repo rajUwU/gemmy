@@ -15,6 +15,8 @@ class UserGroup(Screen):
     server = ObjectProperty(None)
     speed = ObjectProperty(None)
     
+    #test
+    
     def insert_data(self):
         def chk_actives():
             actives=[]
