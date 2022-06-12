@@ -1,0 +1,90 @@
+<CustomLabel@Label>:
+    text_size: self.size
+    valign: "middle"
+    padding_x: 5
+
+<SingleLineTextInput@TextInput>:
+    multiline: False
+
+<GreenButton@Button>:
+    background_color: 1, 1, 1, 1
+    size_hint_y: None
+    height: self.parent.height * 0.120
+
+UserGroup
+
+    allinonepc: chk_allinonepc
+    desktopcomputers: chk_desktopcomputers
+    mfm: chk_mfm
+    laptopnotebook: chk_laptopnotebook
+    server: chk_server
+    speed: txt_speed
+
+    GridLayout:
+        cols: 2
+        padding : 30,30
+        spacing: 20, 20
+        row_default_height: '30dp'
+
+        Label:
+            text: 'All in One PC'
+            text_size: self.size
+            valign: 'middle'
+
+        CheckBox:
+            
+            id : chk_allinonepc
+
+        Label:
+            text: 'Laptop-Notebook'
+            text_size: self.size
+            valign: 'middle'
+
+        CheckBox:
+            
+            id: chk_laptopnotebook
+
+        Label:
+            text: 'Desktop Computers'
+            text_size: self.size
+            valign: 'middle'
+
+        CheckBox:
+            
+            id: chk_desktopcomputers
+
+        Label:
+            text: 'Multifunction Machines MFM'
+            text_size: self.size
+            valign: 'middle'
+
+        CheckBox:
+            
+            id: chk_mfm
+
+        Label:
+            text: 'Server'
+            text_size: self.size
+            valign: 'middle'
+
+        CheckBox:
+            
+            id: chk_server
+
+        CustomLabel:
+            text: 'Scrolling Speed'
+            text_size: self.size
+            valign: 'middle'
+
+        SingleLineTextInput:
+            hint_text: '2'
+            id: txt_speed
+
+        GreenButton:
+            text: 'Ok'
+            on_press: root.insert_data()
+
+
+        GreenButton:
+            text: 'Cancel'
+            on_press: app.stop()
